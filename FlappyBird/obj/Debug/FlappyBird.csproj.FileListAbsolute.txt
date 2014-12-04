@@ -35,6 +35,7 @@ E:\TGP\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\textures\ba
 E:\TGP\FlappyBird\FlappyBird\bin\Debug\FlappyBird.psdp
 E:\TGP\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\Sce.PlayStation.HighLevel.UI.dll
 E:\TGP\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\Sce.PlayStation.HighLevel.UI.dll
+C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\obj\Debug\shaders\shaders\Texture.cgx
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\app.info
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\shaders\Texture.cgx
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\app.exe
@@ -51,6 +52,8 @@ C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\textures\bird.png
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\textures\toppipe.png
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\textures\background.png
+C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\textures\DemonPlaceholder.png
+C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-unsigned\Application\textures\BackgroundCave.png
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\app.info
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\shaders\Texture.cgx
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\app.exe
@@ -67,8 +70,9 @@ C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\textures\bird.png
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\textures\toppipe.png
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\textures\background.png
+C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\textures\DemonPlaceholder.png
+C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird-signed\Application\textures\BackgroundCave.png
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\bin\Debug\FlappyBird.psdp
-C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\obj\Debug\shaders\shaders\Texture.cgx
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\obj\Debug\convertedpdb\app.exe.mdb
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\obj\Debug\app.exe
 C:\Users\Reece\Desktop\Uni work\Technical games production\FlappyBird\FlappyBird\obj\Debug\app.pdb

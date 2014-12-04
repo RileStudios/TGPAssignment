@@ -77,10 +77,10 @@ namespace BillyDemon
 			
 			//Create the background.
 			background = new Background(gameScene);
-			
+		
 			//Create the flappy douche
 			billy = new Billy(gameScene);
-			
+
 			//Create some obstacles.
 			obstacles = new Obstacle[2];
 			obstacles[0] = new Obstacle(Director.Instance.GL.Context.GetViewport().Width*0.5f, gameScene);	
@@ -93,13 +93,20 @@ namespace BillyDemon
 		public static void Update()
 		{
 			//Determine whether the player tapped the screen
-			var touches = Touch.GetData(0);
+			var touches = Touch.GetData(0); 
+			//gamepad
+			//var data = GamePad.GetData(0);
+			
+			
 			//If tapped, inform the bird.
 			if(touches.Count > 0)
 				billy.Tapped();
 			
 			//Update the bird.
 			billy.Update(0.0f);
+			
+			//Determine whether the player has pressed buttons
+			
 			
 			if(billy.Alive)
 			{
@@ -111,6 +118,8 @@ namespace BillyDemon
 					obstacle.Update(0.0f);
 			}
 		}
+		
+
 		
 	}
 }
