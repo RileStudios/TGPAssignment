@@ -110,8 +110,7 @@ namespace BillyDemon
 				//bulletDirection = new Vector2(0.0f,-1.0f);
 				
 				if((sprite.Position.Y) < 0)
-				{
-					playerDirection = new Vector2(0.0f, 0.0f);
+				{					playerDirection = new Vector2(0.0f, 0.0f);
 				}
 				
 				

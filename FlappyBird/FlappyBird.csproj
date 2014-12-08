@@ -42,6 +42,7 @@
     <Compile Include="Obstacle.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="Billy.cs" />
+    <Compile Include="Enemies.cs" />
   </ItemGroup>
   <ItemGroup>
     <PsmMetadata Include="app.xml" />
