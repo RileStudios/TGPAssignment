@@ -16,8 +16,8 @@ namespace BillyDemon
 		private static TextureInfo	textureInfo;
 		//private static int			pushAmount = 100;
 		//private static float		yPositionBeforePush;
-		private static bool			moveRight;
-		private static bool			moveLeft;
+		//private static bool			moveRight;
+		//private static bool			moveLeft;
 		private static bool			alive;
 		private static float          speed;
 		private static Vector2		playerDirection;
@@ -71,7 +71,6 @@ namespace BillyDemon
 			{
 				// Changes which way the player is facing.
 				playerDirection = new Vector2(-1.0f,0.0f);
-				//bulletDirection = new Vector2(-1.0f,0.0f);
 				// If the sprite is within the left of the screen, move. Else, do not move.
 				if(sprite.Position.X < 0)
 				{
@@ -83,7 +82,6 @@ namespace BillyDemon
 			if((gamePadData.Buttons & GamePadButtons.Right) != 0)
 			{
 				playerDirection = new Vector2(1.0f,0.0f);
-				//bulletDirection = new Vector2(1.0f,0.0f);
 				// If the sprite is within the right of the screen, move. Else, do not move.
 				if((sprite.Position.X + sprite.TextureInfo.TileSizeInPixelsf.X) > (Director.Instance.GL.Context.GetViewport().Width))
 				{
@@ -95,7 +93,6 @@ namespace BillyDemon
 			if((gamePadData.Buttons & GamePadButtons.Up) != 0)
 			{
 				playerDirection = new Vector2(0.0f,1.0f);
-				//bulletDirection = new Vector2(0.0f,1.0f);
 				
 				if((sprite.Position.Y + sprite.TextureInfo.TileSizeInPixelsf.Y) > Director.Instance.GL.Context.GetViewport().Height)
 				{
@@ -107,7 +104,6 @@ namespace BillyDemon
 			if((gamePadData.Buttons & GamePadButtons.Down) != 0)
 			{
 				playerDirection = new Vector2(0.0f,-1.0f);
-				//bulletDirection = new Vector2(0.0f,-1.0f);
 				
 				if((sprite.Position.Y) < 0)
 				{
@@ -117,39 +113,7 @@ namespace BillyDemon
 				
 			}
 			
-			sprite.Position += playerDirection * speed;
-				
-//			if(Input2.GamePad.GetData(0).Left)
-//   		   	{
-//				sprite.Position.X +=speed;
-//			}
-		
-//			
-//			data = GamePad.GetData(0);
-//			
-//			if((data.Buttons & GamePadButtons.Left)!= 0)
-//			{
-//				sprite.Position.X -= speed;
-//			}
-//			if((data.Buttons & GamePadButton.Right)!= 0)
-//			{
-//				sprite.Position.X +=speed;
-//			}
-			
-			//adjust the push
-			//if(moveRight)
-			//{
-			//	//sprite.Rotate(0.008f);
-			//	if( (sprite.Position.Y-yPositionBeforePush) < pushAmount)
-			//		sprite.Position = new Vector2(sprite.Position.X + 1f, sprite.Position.Y);
-			//	else
-			//		moveRight = false;
-		//	}
-		//	else
-		//	{
-		//		//sprite.Rotate(-0.005f);
-				//sprite.Position = new Vector2(sprite.Position.X, sprite.Position.Y - 3);
-		//	}
+			sprite.Position += playerDirection * deltaTime * speed;
 		}
 		
 		public void Tapped()
