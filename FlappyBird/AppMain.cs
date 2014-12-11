@@ -9,6 +9,7 @@ using Sce.PlayStation.Core.Input;
 using Sce.PlayStation.HighLevel.GameEngine2D;
 using Sce.PlayStation.HighLevel.GameEngine2D.Base;
 using Sce.PlayStation.HighLevel.UI;
+
 	
 namespace BillyDemon
 {
@@ -21,6 +22,7 @@ namespace BillyDemon
 		private static Obstacle[]	obstacles;
 		private static Billy			billy;
 		private static Background	background;
+		private static Enemies[] 		bunnies;
 				
 		public static void Main (string[] args)
 		{
@@ -86,6 +88,14 @@ namespace BillyDemon
 			obstacles[0] = new Obstacle(Director.Instance.GL.Context.GetViewport().Width*0.5f, gameScene);	
 			obstacles[1] = new Obstacle(Director.Instance.GL.Context.GetViewport().Width, gameScene);
 			
+			//Create the enemies
+			bunnies = new Enemies[4];
+			bunnies[0] = new Enemies(gameScene);
+			bunnies[1] = new Enemies(gameScene);
+			bunnies[2] = new Enemies(gameScene);
+			bunnies[3] = new Enemies(gameScene);
+			bunnies[4] = new Enemies(gameScene);
+			 
 			//Run the scene.
 			Director.Instance.RunWithScene(gameScene, true);
 		}
