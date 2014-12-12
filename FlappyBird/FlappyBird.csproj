@@ -58,11 +58,10 @@
     <ShaderProgram Include="shaders\Texture.vcg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="textures\bottompipe.png" />
-    <Content Include="textures\bird.png" />
-    <Content Include="textures\toppipe.png" />
-    <Content Include="textures\background.png" />
     <Content Include="textures\DemonPlaceholder.png" />
     <Content Include="textures\BackgroundCave.png" />
+    <Content Include="textures\Bunny.png" />
+    <Content Include="textures\bottomstalactite.png" />
+    <Content Include="textures\topstalactite.png" />
   </ItemGroup>
 </Project>

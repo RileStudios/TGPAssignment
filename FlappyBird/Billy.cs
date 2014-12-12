@@ -14,12 +14,8 @@ namespace BillyDemon
 		//Private variables.
 		private static SpriteUV 	sprite;
 		private static TextureInfo	textureInfo;
-		//private static int			pushAmount = 100;
-		//private static float		yPositionBeforePush;
-		//private static bool			moveRight;
-		//private static bool			moveLeft;
 		private static bool			alive;
-		private static float          speed;
+		private static float        speed;
 		private static Vector2		playerDirection;
 	  
 		
@@ -44,11 +40,8 @@ namespace BillyDemon
 			sprite 			= new SpriteUV(textureInfo);	
 			sprite.Quad.S 	= textureInfo.TextureSizef;
 			sprite.Position = new Vector2(50.0f,Director.Instance.GL.Context.GetViewport().Height*0.5f);
-			//sprite.Pivot 	= new Vector2(0.5f,0.5f);
-			//angle = 0.0f;
-			//rise  = false;
 			alive = true;
-			speed = 0.3f;
+			speed = 3.0f;
 			
 			
 			//Add to the current scene.
@@ -65,8 +58,8 @@ namespace BillyDemon
 			playerDirection = new Vector2(0.0f,0.0f);
 			
 			gamePadData = GamePad.GetData(0);
-			
-			// If we move left
+
+            // If the player move left
 			if((gamePadData.Buttons & GamePadButtons.Left) != 0)
 			{
 				// Changes which way the player is facing.
@@ -77,8 +70,8 @@ namespace BillyDemon
 					playerDirection = new Vector2(0.0f, 0.0f);
 				}
 			}
-			
-			// If we move right
+
+            // If the player move right
 			if((gamePadData.Buttons & GamePadButtons.Right) != 0)
 			{
 				playerDirection = new Vector2(1.0f,0.0f);
@@ -88,42 +81,27 @@ namespace BillyDemon
 					playerDirection = new Vector2(0.0f, 0.0f);
 				}
 			}
-			
-			// If we move up
+
+            // If the player move up
 			if((gamePadData.Buttons & GamePadButtons.Up) != 0)
 			{
-				playerDirection = new Vector2(0.0f,1.0f);
-				
+				playerDirection = new Vector2(0.0f,1.0f);	
 				if((sprite.Position.Y + sprite.TextureInfo.TileSizeInPixelsf.Y) > Director.Instance.GL.Context.GetViewport().Height)
 				{
 					playerDirection = new Vector2(0.0f, 0.0f);
 				}
 			}
 			
-			// If we move down
+			// If the player moves down
 			if((gamePadData.Buttons & GamePadButtons.Down) != 0)
 			{
-				playerDirection = new Vector2(0.0f,-1.0f);
-				
+				playerDirection = new Vector2(0.0f,-1.0f);			
 				if((sprite.Position.Y) < 0)
-				{					playerDirection = new Vector2(0.0f, 0.0f);
-				}
-				
-				
+				{					
+					playerDirection = new Vector2(0.0f, 0.0f);
+				}	
 			}
-			
-			sprite.Position += playerDirection * deltaTime * speed;
-		}
-		
-		public void Tapped()
-		{
-//			//if(!rise)
-//			//{
-//			//	rise = true;
-//			//	yPositionBeforePush = sprite.Position.Y;
-//			//}
+			sprite.Position += playerDirection * speed;
 		}
 	}
 }
-
-

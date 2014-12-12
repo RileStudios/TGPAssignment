@@ -26,8 +26,8 @@ namespace BillyDemon
 		//Public functions.
 		public Obstacle (float startX, Scene scene)
 		{
-			textureInfoTop     = new TextureInfo("/Application/textures/toppipe.png");
-			textureInfoBottom  = new TextureInfo("/Application/textures/bottompipe.png");
+			textureInfoTop     = new TextureInfo("/Application/textures/topstalactite.png");
+			textureInfoBottom  = new TextureInfo("/Application/textures/bottomstalactite.png");
 			
 			sprites	= new SpriteUV[2];
 			
@@ -48,7 +48,7 @@ namespace BillyDemon
 			width  = b.Point10.X;
 			height = b.Point01.Y;
 			
-			//Position pipes.
+			//Position Stalactites.
 			sprites[0].Position = new Vector2(startX,
 			                              Director.Instance.GL.Context.GetViewport().Height*RandomPosition());
 			

@@ -35,7 +35,7 @@ namespace BillyDemon
 			Bounds2 b = sprites[0].Quad.Bounds2();
 			width     = b.Point10.X;
 			
-			//Position pipes.
+			//Position stalactites.
 			sprites[0].Position = new Vector2(0.0f, 0.0f);
 			
 			sprites[1].Position = new Vector2(sprites[0].Position.X+width, 0.0f);

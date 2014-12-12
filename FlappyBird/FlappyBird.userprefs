@@ -1,9 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Billy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppMain.cs">
     <Files>
-      <File FileName="AppMain.cs" Line="103" Column="11" />
-      <File FileName="Billy.cs" Line="113" Column="6" />
+      <File FileName="AppMain.cs" Line="117" Column="4" />
+      <File FileName="Billy.cs" Line="101" Column="6" />
+      <File FileName="Enemies.cs" Line="58" Column="4" />
+      <File FileName="Obstacle.cs" Line="51" Column="26" />
+      <File FileName="Background.cs" Line="72" Column="71" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
