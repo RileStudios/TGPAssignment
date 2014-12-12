@@ -15,71 +15,46 @@ namespace BillyDemon
 	public class Enemies
 	{
 		
-		private static SpriteUV[] 	spriteBunnies;
-		private static TextureInfo	textureInfoBunny;
-		private static bool			aliveBunny;
-		private static float        speed;
+		private 		SpriteUV[] 	spriteBunnies;
+		private 		TextureInfo	textureInfoBunny;
+		private bool	aliveBunny;
+		private float   bunnySpeed;
+		private 		Sce.PlayStation.HighLevel.GameEngine2D.Base.Math.RandGenerator randomPosition;
 		
 		  
 		
 		public Enemies (Scene scene)
 		{
-			textureInfoBunny  = new TextureInfo("/Application/textures/DemonPlaceholder.png");
 			
-			spriteBunnies = new SpriteUV[4];
+			randomPosition = new Sce.PlayStation.HighLevel.GameEngine2D.Base.Math.RandGenerator(DateTime.Now.Millisecond);
+			textureInfoBunny  = new TextureInfo("/Application/textures/Bunny.png");
 			
-			//bunny 1
-			spriteBunnies[0] = new SpriteUV(textureInfoBunny);
-			spriteBunnies[0].Quad.S 	= textureInfoBunny.TextureSizef;
-			//bunny 2
-			spriteBunnies[1] = new SpriteUV(textureInfoBunny);
-			spriteBunnies[1].Quad.S 	= textureInfoBunny.TextureSizef;
-			//bunny 3
-			spriteBunnies[2] = new SpriteUV(textureInfoBunny);
-			spriteBunnies[2].Quad.S 	= textureInfoBunny.TextureSizef;
-			//bunny 4
-			spriteBunnies[3] = new SpriteUV(textureInfoBunny);
-			spriteBunnies[3].Quad.S 	= textureInfoBunny.TextureSizef;
-			//bunny 5
-			spriteBunnies[4] = new SpriteUV(textureInfoBunny);
-			spriteBunnies[4].Quad.S 	= textureInfoBunny.TextureSizef;
+			spriteBunnies = new SpriteUV[5];
+			
+			for(int i =0;i<=4;i++)
+			{
+			//Set bunny textures
+			spriteBunnies[i] = new SpriteUV(textureInfoBunny);
+			spriteBunnies[i].Quad.S 	= textureInfoBunny.TextureSizef;
+			}
 			
 			//Enemy positions
-			spriteBunnies[0].Position = new Vector2( 30.0f,
-			                          Director.Instance.GL.Context.GetViewport().Height*RandomPosition());
-			
-			spriteBunnies[1].Position = new Vector2( 40.0f,
-			                          Director.Instance.GL.Context.GetViewport().Height*RandomPosition());
-			
-			spriteBunnies[2].Position = new Vector2( 10.0f,
-			                          Director.Instance.GL.Context.GetViewport().Height*RandomPosition());
-			
-			spriteBunnies[3].Position = new Vector2( 15.0f,
-			                          Director.Instance.GL.Context.GetViewport().Height*RandomPosition());
-			
-			spriteBunnies[4].Position = new Vector2( 5.0f,
-			                          Director.Instance.GL.Context.GetViewport().Height*RandomPosition());
+			for(int i =0;i<=4;i++)
+			{
+			spriteBunnies[i].Position = new Vector2(randomPosition.NextFloat(0, Director.Instance.GL.Context.GetViewport().Width - textureInfoBunny.TextureSizef.X), 
+			                              randomPosition.NextFloat(0, Director.Instance.GL.Context.GetViewport().Height - textureInfoBunny.TextureSizef.Y));
+			}
 			
 			//Add it to the scene
-			scene.AddChild(spriteBunnies);
-			
+			for(int i =0;i<=4;i++)
+			{
+			scene.AddChild(spriteBunnies[i]);
+			}
 		}
 		
 		public void Dispose()
 		{
 			textureInfoBunny.Dispose();
-		}
-		
-		private float RandomPosition()
-		{
-			Random rand = new Random();
-			float randomPosition = (float)rand.NextDouble();
-			randomPosition += 0.45f;
-			
-			if(randomPosition > 1.0f)
-				randomPosition = 0.9f;
-		
-			return randomPosition;
 		}
 	}
 }
